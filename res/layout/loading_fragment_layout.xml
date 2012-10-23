@@ -1,0 +1,6 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ViewAnimator android:id="@+id/animator" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include layout="@layout/progress"/>
+        <FrameLayout android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </ViewAnimator>
+</LinearLayout>
