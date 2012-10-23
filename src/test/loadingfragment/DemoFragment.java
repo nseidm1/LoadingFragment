@@ -43,36 +43,35 @@ public class DemoFragment extends LoadingFragment implements OnClickListener{
 		super.onPageFinished(view, url);
 		mHandler.postDelayed(new Runnable(){
 		    @Override
-		    public void run() {
+		    public void run(){
 			mLoading = false;
 			DemoFragment.this.showContent();
 		    }
-		}, 2500);
+		}, 500);
 	    }
 	});
     }
     @Override
-    public int setInAnimation() {
+    public int setInAnimation(){
 	return R.anim.fade_in;
     }
     @Override
-    public int setOutAnimation() {
+    public int setOutAnimation(){
 	return R.anim.fade_out;
     }
     @Override
-    public void onClick(View v) {
-	switch(v.getId()){
-	case R.id.reload:
+    public void onClick(View v){
+	int id = v.getId();
+	if (id == R.id.reload){
 	    if (!mLoading){
 		mLoading = true;
 		showLoading();
 		mHandler.postDelayed(new Runnable(){
 		    @Override
-		    public void run() {
+		    public void run(){
 			mWebView.loadUrl("http://m.google.com");
 		    }
-		}, 2500);
-		break;
+		}, 500);
 	    }
 	}
     }
