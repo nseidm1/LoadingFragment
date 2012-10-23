@@ -1,6 +1,8 @@
 LoadingFragment
 ===============
 
+<img src="http://upload.wikimedia.org/wikipedia/commons/2/2d/Pbar.gif"/>
+
 Implementing the LoadingFragment is just like a regular fragment. Management of the 
 progress bar is done completely behind the scenes as your View is programatically injected 
 into the structured view hierarchy.
