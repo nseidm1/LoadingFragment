@@ -10,7 +10,7 @@ into the structured view hierarchy.
 LoadingFragment has three abstract methods:
 
 <pre><code>public abstract View onCreateMainView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
-public abstract int setInAnimation ();
+public abstract int setInAnimation();
 public abstract int setOutAnimation();</pre></code>
     
 onCreateMainView is identicaly to onCreateView of a standard fragment. setIn and setOutAnimation 
