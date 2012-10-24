@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
@@ -22,8 +21,7 @@ public abstract class LoadingFragment extends Fragment{
     
     
     public abstract View onCreateMainView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
-    public abstract int  setInAnimation  (									 );
-    public abstract int  setOutAnimation (								         );
+    public abstract void configureAnimator(ViewAnimator viewAnimator);
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -31,8 +29,7 @@ public abstract class LoadingFragment extends Fragment{
 	mProgressBarBackground = (ImageView) view.findViewById(R.id.loading_fragment_progress_bar_background);
 	
 	mViewAnimator = (ViewAnimator) view.findViewById(R.id.loading_fragment_animator_controller);
-	mViewAnimator.setInAnimation(AnimationUtils.loadAnimation(getActivity(), setInAnimation()));
-	mViewAnimator.setOutAnimation(AnimationUtils.loadAnimation(getActivity(), setOutAnimation()));
+	configureAnimator(mViewAnimator);
 	
 	FrameLayout mainViewContainer = (FrameLayout) view.findViewById(R.id.loading_fragment_content_container);
 	mainViewContainer.addView(onCreateMainView(inflater, container, savedInstanceState));

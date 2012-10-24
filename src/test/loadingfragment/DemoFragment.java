@@ -13,6 +13,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageView.ScaleType;
+import android.widget.ViewAnimator;
 
 public class DemoFragment extends LoadingFragment implements OnClickListener{
     
@@ -23,6 +24,7 @@ public class DemoFragment extends LoadingFragment implements OnClickListener{
     public static DemoFragment newInstance(){
 	return new DemoFragment();
     }
+    
     @Override
     public View onCreateMainView(LayoutInflater inflater, 
 	    			 ViewGroup      container, 
@@ -33,6 +35,7 @@ public class DemoFragment extends LoadingFragment implements OnClickListener{
 	mReload.setOnClickListener(this);
 	return view;
     }
+    
     @Override
     public void onActivityCreated(Bundle bundle){
 	super.onActivityCreated(bundle);
@@ -54,14 +57,13 @@ public class DemoFragment extends LoadingFragment implements OnClickListener{
 	    }
 	});
     }
+    
     @Override
-    public int setInAnimation(){
-	return R.anim.fade_in;
+    public void configureAnimator(ViewAnimator viewAnimator){
+	viewAnimator.setInAnimation(getActivity(), R.anim.fade_in);
+	viewAnimator.setOutAnimation(getActivity(), R.anim.fade_out);
     }
-    @Override
-    public int setOutAnimation(){
-	return R.anim.fade_out;
-    }
+
     @Override
     public void onClick(View v){
 	int id = v.getId();
