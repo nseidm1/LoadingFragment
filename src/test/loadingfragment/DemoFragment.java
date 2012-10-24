@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.ViewAnimator;
 
@@ -39,8 +40,6 @@ public class DemoFragment extends LoadingFragment implements OnClickListener{
     @Override
     public void onActivityCreated(Bundle bundle){
 	super.onActivityCreated(bundle);
-	setProgressBackgroundImageDrawable(getResources().getDrawable(R.drawable.google_android_sign));
-	setProgressBackgroundScaleType(ScaleType.CENTER_CROP);
 	mWebView.loadUrl("http://m.google.com");
 	mLoading = true;
 	mWebView.setWebViewClient(new WebViewClient(){
@@ -62,6 +61,12 @@ public class DemoFragment extends LoadingFragment implements OnClickListener{
     public void configureAnimator(ViewAnimator viewAnimator){
 	viewAnimator.setInAnimation(getActivity(), R.anim.fade_in);
 	viewAnimator.setOutAnimation(getActivity(), R.anim.fade_out);
+    }
+
+    @Override
+    public void configureProgressBackground(ImageView mProgressBBackground){
+	mProgressBBackground.setImageDrawable(getResources().getDrawable(R.drawable.google_android_sign));
+	mProgressBBackground.setScaleType(ScaleType.CENTER_CROP);
     }
 
     @Override
