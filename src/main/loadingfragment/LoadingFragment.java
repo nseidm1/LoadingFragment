@@ -56,18 +56,22 @@ public abstract class LoadingFragment extends Fragment{
     }
     
     public void setProgressBackgroundImageBitmap(Bitmap image){
+	callCheck();
 	mProgressBarBackground.setImageBitmap(image);
     }
     
     public void setProgressBackgroundImageDrawable(Drawable drawable){
+	callCheck();
 	mProgressBarBackground.setImageDrawable(drawable);
     }
     
     public void setProgressBackgroundScaleType(ScaleType scaleType){
+	callCheck();
 	mProgressBarBackground.setScaleType(scaleType);
     }
     
     public void setProgressBackgroundAlpha(float alpha){
+	callCheck();
 	mProgressBarBackground.setAlpha(alpha);
     }
     
