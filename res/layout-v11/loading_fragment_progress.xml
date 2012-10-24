@@ -1,0 +1,4 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/loading_fragment_progress_bar_container" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center">
+	<ImageView android:id="@+id/loading_fragment_progress_bar_background" android:layout_width="match_parent" android:layout_height="match_parent"/>
+	<ProgressBar android:layout_centerInParent="true" style="@android:style/Widget.Holo.ProgressBar.Large" android:layout_width="wrap_content" android:layout_height="wrap_content"/>        
+</RelativeLayout>
