@@ -40,21 +40,6 @@ public abstract class LoadingFragment extends Fragment{
 	return view;
     }
     
-    public void setProgressBackgroundColor(int color){
-	callCheck();
-	mProgressBarBackground.setBackgroundColor(color);
-    }
-    
-    public void setProgressBackgroundDrawableResource(int resource){
-	callCheck();
-	mProgressBarBackground.setBackgroundResource(resource);
-    }
-
-    public void setProgressBackgroundDrawable(Drawable drawable){
-	callCheck();
-	mProgressBarBackground.setBackground(drawable);
-    }
-    
     public void setProgressBackgroundImageBitmap(Bitmap image){
 	callCheck();
 	mProgressBarBackground.setImageBitmap(image);
