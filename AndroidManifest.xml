@@ -2,8 +2,7 @@
     <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15" />
     <uses-permission android:name="android.permission.INTERNET" />
     <application android:label="@string/app_name"
-        android:icon="@drawable/ic_launcher"
-        android:theme="@style/AppTheme">
+        android:icon="@drawable/ic_launcher">
         <activity android:launchMode="singleTask" android:windowSoftInputMode="stateHidden" android:name="test.loadingfragment.DemoActivity">
         	<intent-filter>
         		<action android:name="android.intent.action.MAIN" />
