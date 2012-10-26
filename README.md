@@ -10,11 +10,11 @@ into the structured view hierarchy.
 LoadingFragment has three abstract methods:
 
 <pre><code>public abstract View onCreateMainView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
-public abstract int setInAnimation();
-public abstract int setOutAnimation();</pre></code>
+public abstract void configureAnimator(ViewAnimator   viewAnimator);
+public abstract void configureProgressBackground(ImageView mProgressBBackground);</pre></code>
     
-onCreateMainView is identical to onCreateView of a standard fragment. setIn and setOutAnimation 
-return an int of the anim resource to use respectively for the in and out transition.
+onCreateMainView is identical to onCreateView of a standard fragment. The other two methods provide access to the indeterminate progress bar background, 
+and the managing ViewAnimator.
 
 There are two public methods:
 
