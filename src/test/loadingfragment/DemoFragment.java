@@ -64,9 +64,9 @@ public class DemoFragment extends LoadingFragment implements OnClickListener{
     }
 
     @Override
-    public void configureProgressBackground(ImageView mProgressBBackground){
-	mProgressBBackground.setImageDrawable(getResources().getDrawable(R.drawable.google_android_sign));
-	mProgressBBackground.setScaleType(ScaleType.CENTER_CROP);
+    public void configureProgressBackground(ImageView progressBBackground){
+	progressBBackground.setImageDrawable(getResources().getDrawable(R.drawable.google_android_sign));
+	progressBBackground.setScaleType(ScaleType.CENTER_CROP);
     }
 
     @Override

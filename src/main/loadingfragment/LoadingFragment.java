@@ -19,7 +19,7 @@ public abstract class LoadingFragment extends Fragment{
     
     public abstract View onCreateMainView           (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
     public abstract void configureAnimator          (ViewAnimator   viewAnimator                                            );
-    public abstract void configureProgressBackground(ImageView      mProgressBBackground                                    );
+    public abstract void configureProgressBackground(ImageView      progressBackground                                    );
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
