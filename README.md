@@ -13,7 +13,7 @@ LoadingFragment has three abstract methods:
 public abstract int setInAnimation();
 public abstract int setOutAnimation();</pre></code>
     
-onCreateMainView is identicaly to onCreateView of a standard fragment. setIn and setOutAnimation 
+onCreateMainView is identical to onCreateView of a standard fragment. setIn and setOutAnimation 
 return an int of the anim resource to use respectively for the in and out transition.
 
 There are two public methods:
