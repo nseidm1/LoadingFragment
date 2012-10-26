@@ -10,7 +10,7 @@ into the structured view hierarchy.
 LoadingFragment has three abstract methods:
 
 <pre><code>public abstract View onCreateMainView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
-public abstract void configureAnimator(ViewAnimator   viewAnimator);
+public abstract void configureAnimator(ViewAnimator viewAnimator);
 public abstract void configureProgressBackground(ImageView mProgressBBackground);</pre></code>
     
 onCreateMainView is identical to onCreateView of a standard fragment. The other two methods provide access to the indeterminate progress bar background, 
